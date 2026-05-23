@@ -30,8 +30,8 @@ A multi-warehouse inventory reservation platform built with Next.js, demonstrati
 1. Clone the repo and install dependencies:
 
 ```bash
-git clone <your-repo-url>
-cd project
+git clone https://github.com/jayesh3103/allo-inventory.git
+cd allo-inventory
 npm install
 ```
 
@@ -66,9 +66,29 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Architecture
 
+### System Architecture Diagram
+
+```mermaid
+graph TD
+    Client[Client Browser]
+    ClerkAuth[Clerk Authentication]
+    NextJS[Next.js 15 App Router]
+    API[API Routes / Server Actions]
+    Redis[(Upstash Redis)]
+    Postgres[(Neon PostgreSQL)]
+
+    Client -->|1. Sign In| ClerkAuth
+    Client -->|2. View Products| NextJS
+    NextJS -->|3. Fetch Data| Postgres
+    Client -->|4. Reserve / Confirm| API
+    
+    API -->|5. Check Idempotency| Redis
+    API -->|6. Atomic UPDATE| Postgres
+```
+
 ### Data Model
 
-```
+```text
 Product ─┐
          ├──> Inventory (per product per warehouse)
 Warehouse┘         │
@@ -149,7 +169,6 @@ This prevents double-reservations from network retries or duplicate clicks. The 
 
 ### Things I simplified
 
-- **No authentication**: In a real system, reservations would be tied to a user/session. Right now anyone can confirm/cancel anyone's reservation if they know the ID.
 - **Single-item reservations**: Each reservation is for one product at one warehouse. A real checkout would support a cart with multiple items, potentially spanning warehouses.
 - **No WebSocket/SSE for real-time updates**: Stock counts are fetched on page load and after actions. In production, I'd push stock updates via WebSocket so all viewers see changes instantly.
 - **Basic UI**: The frontend is functional and clean but not production-polished. I focused effort on the backend correctness.
