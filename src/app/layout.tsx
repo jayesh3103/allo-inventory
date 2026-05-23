@@ -34,7 +34,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen">
+      <body className="min-h-screen flex flex-col">
         <ClerkProvider>
           <nav className="border-b px-6 py-4" style={{ borderColor: 'var(--card-border)', background: 'var(--card-bg)' }}>
             <div className="max-w-6xl mx-auto flex items-center justify-between">
@@ -73,9 +73,17 @@ export default function RootLayout({
               </div>
             </div>
           </nav>
-          <main className="max-w-6xl mx-auto px-6 py-8">
+          <main className="max-w-6xl mx-auto px-6 py-8 flex-grow">
             {children}
           </main>
+          
+          <footer className="border-t py-6 mt-auto" style={{ borderColor: 'var(--card-border)' }}>
+            <div className="max-w-6xl mx-auto px-6 flex justify-center items-center">
+              <p className="text-sm font-medium" style={{ color: 'var(--muted-text)' }}>
+                Built by <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">Jayesh Muley</span>
+              </p>
+            </div>
+          </footer>
         </ClerkProvider>
       </body>
     </html>
