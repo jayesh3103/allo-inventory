@@ -16,6 +16,10 @@ A multi-warehouse inventory reservation platform built with Next.js, demonstrati
 ![Reserve Modal](./public/screenshots/reserve-modal.png)
 ![Checkout Pending](./public/screenshots/checkout-pending.png)
 ![Checkout Confirmed](./public/screenshots/checkout-confirmed.png)
+![Reservation Cancelled](./public/screenshots/checkout-cancelled.png)
+
+### Error Handling & Edge Cases
+![Out of Stock Error](./public/screenshots/out-of-stock-error.png)
 
 ### Authentication
 ![Sign In](./public/screenshots/sign-in.png)
