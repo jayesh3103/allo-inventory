@@ -6,6 +6,26 @@ A multi-warehouse inventory reservation platform built with Next.js, demonstrati
 
 > **[Deployed URL]** — _Add your Vercel URL here after deploying_
 
+## Screenshots
+
+<details>
+<summary>Click to view screenshots</summary>
+
+### Product Listing (Dark Mode & Light Mode)
+![Dark Mode](./public/screenshots/dark-mode.png)
+![Light Mode](./public/screenshots/light-mode.png)
+
+### Reservation Flow
+![Reserve Modal](./public/screenshots/reserve-modal.png)
+![Checkout Pending](./public/screenshots/checkout-pending.png)
+![Checkout Confirmed](./public/screenshots/checkout-confirmed.png)
+
+### Authentication
+![Sign In](./public/screenshots/sign-in.png)
+![Sign Up](./public/screenshots/sign-up.png)
+
+</details>
+
 ## Tech Stack
 
 - **Framework**: Next.js 16 (App Router)
