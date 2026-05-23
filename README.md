@@ -79,6 +79,32 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Testing Edge Cases (For Reviewers)
+
+To easily verify that the core requirements (concurrency safety and expiration) are handled correctly, you can manually trigger these edge cases on the live URL.
+
+### 1. Testing the 409 Error (Not Enough Stock / Race Condition)
+Since the frontend UI limits the quantity dropdown based on available stock, you must simulate a race condition to trigger a 409 error:
+
+1. Log into the app on **Browser Window 1**.
+2. Open an **Incognito Window** (Browser Window 2) and log in with a different account.
+3. In both windows, navigate to a product that only has **1 item left in stock**.
+4. In Window 1, click **Reserve** and go to the checkout page. (This safely locks the last item in the database).
+5. In Window 2, you are still on the product page and the UI still thinks there is 1 item left because you haven't refreshed. Click **Reserve**.
+6. **Result:** The backend will block the transaction, return a `409 Conflict`, and the UI will catch it and display a red toast error saying **"Not enough stock available"** instead of failing silently.
+
+### 2. Testing the 410 Error (Reservation Expired)
+This tests the lazy-cleanup fallback and expiration logic when a user "squats" on a checkout page for too long.
+
+1. Reserve any item normally to reach the `/checkout/...` page.
+2. Notice the 10:00 countdown timer.
+3. **Wait exactly 10 minutes** (go grab a coffee!).
+4. Once the timer hits 00:00, the database considers the reservation dead and releases the stock back to the public.
+5. Now, click the **Confirm Purchase** button.
+6. **Result:** The backend will realize the reservation is expired, return a `410 Gone`, and the UI will catch it, pop up a red error saying **"Reservation has expired"**, and automatically redirect you back to the products page so you have to start over.
+
+*(Tip: To test this faster locally, change `RESERVATION_TTL_MINUTES="1"` in your `.env`, restart the server, and wait just 1 minute.)*
+
 ## Architecture
 
 ### System Architecture Diagram
