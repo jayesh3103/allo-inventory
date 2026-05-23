@@ -4,7 +4,7 @@ A multi-warehouse inventory reservation platform built with Next.js, demonstrati
 
 ## Live Demo
 
-> **[Live Demo: allo-inventory-jayeshmuley.vercel.app](https://allo-inventory-jayeshmuley.vercel.app/)**
+> **[allo-inventory-jayeshmuley.vercel.app](https://allo-inventory-jayeshmuley.vercel.app/)**
 
 ## Screenshots
 
