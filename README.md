@@ -8,9 +8,6 @@ A multi-warehouse inventory reservation platform built with Next.js, demonstrati
 
 ## Screenshots
 
-<details>
-<summary>Click to view screenshots</summary>
-
 ### Product Listing (Dark Mode & Light Mode)
 ![Dark Mode](./public/screenshots/dark-mode.png)
 ![Light Mode](./public/screenshots/light-mode.png)
@@ -23,8 +20,6 @@ A multi-warehouse inventory reservation platform built with Next.js, demonstrati
 ### Authentication
 ![Sign In](./public/screenshots/sign-in.png)
 ![Sign Up](./public/screenshots/sign-up.png)
-
-</details>
 
 ## Tech Stack
 
