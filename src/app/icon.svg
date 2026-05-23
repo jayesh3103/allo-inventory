@@ -1,14 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <defs>
-    <linearGradient id="grad" x1="0" y1="1" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ec4899" />
-      <stop offset="50%" stop-color="#a855f7" />
-      <stop offset="100%" stop-color="#6366f1" />
-    </linearGradient>
-  </defs>
-  <rect width="24" height="24" rx="6" fill="url(#grad)"/>
-  <path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 4h3l3 15h11" />
-  <circle cx="8" cy="20" r="2" fill="none" stroke="#ffffff" stroke-width="2"/>
-  <path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 16l8-14 6 3-8 14z" />
-  <path fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M11.5 10.5l2 2 3.5-5" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Background Box Top -->
+  <path d="M17 8 L 22 11 L 17 14 L 12 11 Z" fill="#fb923c" />
+  <!-- Background Box Left -->
+  <path d="M12 11 L 17 14 L 17 20 L 12 17 Z" fill="#fdba74" />
+  <!-- Background Box Right -->
+  <path d="M17 14 L 22 11 L 22 17 L 17 20 Z" fill="#f97316" />
+  
+  <!-- Clipboard Body -->
+  <rect x="2" y="5" width="11" height="15" rx="1.5" fill="#ffffff" stroke="#4b5563" stroke-width="1.5" />
+  
+  <!-- Clipboard Clip -->
+  <path d="M5 3h5v2.5H5V3z" fill="#f97316" />
+  <circle cx="7.5" cy="4.25" r="0.75" fill="#ffffff" />
+  
+  <!-- Checklist lines -->
+  <line x1="8" y1="9" x2="11" y2="9" stroke="#4b5563" stroke-width="1.2" stroke-linecap="round" />
+  <line x1="8" y1="12" x2="11" y2="12" stroke="#4b5563" stroke-width="1.2" stroke-linecap="round" />
+  <line x1="8" y1="15" x2="11" y2="15" stroke="#4b5563" stroke-width="1.2" stroke-linecap="round" />
+  <line x1="8" y1="18" x2="11" y2="18" stroke="#4b5563" stroke-width="1.2" stroke-linecap="round" />
+  
+  <!-- Checks -->
+  <path d="M4 8.5l1 1 1.5-1.5" stroke="#06b6d4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M4 11.5l1 1 1.5-1.5" stroke="#06b6d4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Crosses -->
+  <path d="M4 14.25l2.5 2.5m0-2.5L4 16.75" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M4 17.25l2.5 2.5m0-2.5L4 19.75" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" />
 </svg>
