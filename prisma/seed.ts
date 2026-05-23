@@ -39,34 +39,34 @@ async function main() {
   const products = await Promise.all([
     prisma.product.create({
       data: {
-        name: 'Wireless Earbuds Pro',
-        sku: 'WEB-PRO-001',
-        description: 'Premium noise-cancelling wireless earbuds with 24hr battery life',
-        price: 2999.0,
+        name: 'Allo Delay Spray',
+        sku: 'ALLO-DLY-001',
+        description: 'Clinically proven lidocaine spray to help you last longer in bed',
+        price: 499.0,
       },
     }),
     prisma.product.create({
       data: {
-        name: 'Mechanical Keyboard',
-        sku: 'MKB-RGB-002',
-        description: 'Cherry MX Blue switches, RGB backlit, full-size mechanical keyboard',
-        price: 5499.0,
+        name: 'Performance Plus Tablets',
+        sku: 'ALLO-SDF-050',
+        description: 'Prescription-grade Sildenafil (50mg) for strong and lasting erections',
+        price: 899.0,
       },
     }),
     prisma.product.create({
       data: {
-        name: 'USB-C Hub 7-in-1',
-        sku: 'HUB-7IN1-003',
-        description: 'USB-C hub with HDMI, USB 3.0, SD card reader, and PD charging',
-        price: 1899.0,
+        name: 'Daily Wellness Gummies',
+        sku: 'ALLO-GUM-001',
+        description: 'Multi-vitamin gummies for daily energy, stamina, and overall men\'s health',
+        price: 599.0,
       },
     }),
     prisma.product.create({
       data: {
-        name: 'Adjustable Laptop Stand',
-        sku: 'ALS-ERG-004',
-        description: 'Ergonomic aluminum laptop stand with adjustable height and angle',
-        price: 1299.0,
+        name: 'Stamina Booster Drops',
+        sku: 'ALLO-DRP-001',
+        description: 'Ayurvedic herbal blend to naturally boost your stamina and performance',
+        price: 349.0,
       },
     }),
   ])
