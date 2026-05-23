@@ -38,16 +38,16 @@ export default function RootLayout({
         <ClerkProvider>
           <nav className="border-b px-6 py-4" style={{ borderColor: 'var(--card-border)', background: 'var(--card-bg)' }}>
             <div className="max-w-6xl mx-auto flex items-center justify-between">
-              <a href="/" className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-8 h-8 rounded bg-blue-600">
-                  <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <a href="/" className="flex items-center gap-3 group">
+                <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-pink-500 via-purple-500 to-indigo-500 shadow-[0_0_15px_rgba(168,85,247,0.5)] group-hover:shadow-[0_0_25px_rgba(168,85,247,0.8)] group-hover:scale-110 transition-all duration-300">
+                  <svg className="w-6 h-6 text-white group-hover:-translate-y-1 transition-transform duration-300 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 4h3l3 15h11" />
                     <circle cx="8" cy="20" r="2" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M7 16l8-14 6 3-8 14z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M11.5 10.5l2 2 3.5-5" />
                   </svg>
                 </div>
-                <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+                <span className="text-3xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 drop-shadow-sm">
                   allo inventory
                 </span>
               </a>
@@ -82,8 +82,8 @@ export default function RootLayout({
           
           <footer className="border-t py-6 mt-auto" style={{ borderColor: 'var(--card-border)' }}>
             <div className="max-w-6xl mx-auto px-6 flex justify-center items-center">
-              <p className="text-sm text-slate-500 dark:text-slate-400">
-                Built by <span className="font-medium text-blue-600 hover:underline">Jayesh Muley</span>
+              <p className="text-sm font-medium" style={{ color: 'var(--muted-text)' }}>
+                Built by <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">Jayesh Muley</span>
               </p>
             </div>
           </footer>
