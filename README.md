@@ -67,6 +67,7 @@ You'll need:
 - `UPSTASH_REDIS_REST_TOKEN` — from your Upstash dashboard
 - `CRON_SECRET` — any random string, used to protect the cron endpoint
 - `RESERVATION_TTL_MINUTES` — defaults to 10
+- `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` & `CLERK_SECRET_KEY` — from your Clerk dashboard (used for user authentication)
 
 3. Run migrations and seed the database:
 
